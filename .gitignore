@@ -1,0 +1,7 @@
+.venv/
+tuned_model_nfcorpus/
+checkpoints/
+sandbox.ipynb
+__pycache__/
+*.pyc
+.DS_Store
