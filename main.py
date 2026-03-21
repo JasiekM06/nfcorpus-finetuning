@@ -20,7 +20,7 @@ def set_seed(seed=42):
 def main():
     set_seed(42)
     
-    # Device setup: Optimized for Apple Silicon (M4) or fallback to CPU
+    # Device setup: CUDA (NVIDIA) > MPS (Apple Silicon) > CPU fallback
 
     if torch.cuda.is_available():
         device = "cuda"
@@ -125,13 +125,13 @@ def main():
         epochs=num_epochs,
         warmup_steps=warmup_steps,
         optimizer_params={'lr': 1.5e-5},
-        output_path='tuned_model_nfcorpus_v10',
+        output_path='tuned_model_nfcorpus',
         save_best_model=True,
         show_progress_bar=True,
         use_amp=use_amp,          # True on CUDA, False on MPS/CPU
         evaluation_steps=50       # Frequent evaluation to capture best checkpoint
     )
-    print("\n✅ Training completed. Best model checkpoint saved to 'tuned_model_nfcorpus_v10'.")
+    print("\n✅ Training completed. Best model checkpoint saved to 'tuned_model_nfcorpus'.")
 
 # --- 3. ENTRY POINT ---
 if __name__ == "__main__":

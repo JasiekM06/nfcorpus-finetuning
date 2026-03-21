@@ -1,0 +1,24 @@
+================================================================================
+EVALUATION RESULTS — Fine-tuning all-MiniLM-L6-v2 on NFCorpus
+================================================================================
+
+Model      : all-MiniLM-L6-v2
+Dataset    : BeIR/nfcorpus + BeIR/nfcorpus-qrels
+Loss       : MultipleNegativesRankingLoss
+Epochs     : 4
+Batch size : 64
+LR         : 1.5e-5
+Device     : Apple M4 (MPS), use_amp=False
+Train time : 29 min 9.2 s
+
+--------------------------------------------------------------------------------
+Metric        | Baseline   | Fine-tuned | Change     | Target     | Status
+--------------------------------------------------------------------------------
+Recall@10     | 0.1531     | 0.1644     | +0.0113    | +0.01      | PASS
+NDCG@10       | 0.3115     | 0.3344     | +0.0229    | +0.01      | PASS
+MRR@10        | 0.5038     | 0.5277     | +0.0239    | +0.01      | PASS
+--------------------------------------------------------------------------------
+
+All three metrics exceed the required improvement threshold of +0.01.
+
+================================================================================
