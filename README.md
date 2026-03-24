@@ -47,7 +47,7 @@ For each (query, matching document) pair in a batch, all other documents in that
 
 ### Reproducibility
 
-Seed 42 is set globally across `random`, `numpy`, `torch`, and `torch.mps` before any operation. Results may still vary slightly depending on hardware, operating system, and library versions — particularly between CUDA and MPS/CPU due to differences in floating-point precision.
+Seed 42 is set globally across `random`, `numpy`, `torch`, and `torch.mps` before any operation. Results may still vary slightly depending on hardware, operating system, and library versions — particularly between CUDA and MPS/CPU.
 
 ### Best Checkpoint
 
